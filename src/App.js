@@ -6,11 +6,32 @@ import Cards from './components/Cards';
 
 function App() {
   const [cardsdata , setCradsData] = useState(data);
-  console.log(cardsdata);
+  const [readmore,setReadmore] = useState(false);
+  const description  = readmore ? info : `${info.subString(0,200)}...`
+  function deleter (id) {
+    const newcard = cardsdata.filter((card) => {
+      return card.id !== id 
+    })
+    setCradsData(newcard);
+  }
+  if(cardsdata.length == 0){
+    return (
+      <div>
+        <h2>No Tour Found !</h2>
+        <button onClick={() => setCradsData(data)}>Refresh Page</button>
+      </div>
+    )
+  }
+  function selector (id) {
+    const newcard = cardsdata.filter((card) => {
+      return card.id == id 
+    })
+    setCradsData(newcard);
+  }
     return (
     <div className="App">
      <h1>University Trip</h1>
-     <Cards data={cardsdata}/>
+     <Cards data={cardsdata} deleter={deleter} selector={selector}/>
     </div>
   );
 }

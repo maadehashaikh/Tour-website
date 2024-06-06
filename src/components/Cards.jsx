@@ -1,12 +1,12 @@
 import React from 'react'
 import Card from './Card';
 
-const Cards = ({data}) => {
+const Cards = ({data,deleter,selector}) => {
   return (
     <div>
       {
         data.map((onecard)=> {
-          return <Card {...onecard}/>
+          return <Card  {...onecard} deleter={deleter} selector={selector}/>
         })
       }
     </div>

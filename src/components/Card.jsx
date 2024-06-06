@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({id,imageLink,price,place,info}) => {
+const Card = ({id,imageLink,price,place,info,deleter,selector}) => {
   // console.log(id,imageLink,price,place,info);
   return (
     <div className='card'>
@@ -9,8 +9,8 @@ const Card = ({id,imageLink,price,place,info}) => {
      <h2>{place}</h2>
      <p>{info}</p>
      <div>
-      <button>Interested</button>
-      <button>not Interested</button>
+      <button onClick={()=> selector(id)}>Interested</button>
+      <button onClick={() => deleter(id)}>not Interested</button>
      </div>
     </div>
   )
