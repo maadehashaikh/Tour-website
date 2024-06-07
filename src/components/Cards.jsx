@@ -3,7 +3,7 @@ import Card from './Card';
 
 const Cards = ({data,deleter,selector}) => {
   return (
-    <div>
+    <div className='Cards'>
       {
         data.map((onecard)=> {
           return <Card  {...onecard} deleter={deleter} selector={selector}/>

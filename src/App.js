@@ -5,9 +5,7 @@ import { useState } from 'react';
 import Cards from './components/Cards';
 
 function App() {
-  const [cardsdata , setCradsData] = useState(data);
-  const [readmore,setReadmore] = useState(false);
-  const description  = readmore ? info : `${info.subString(0,200)}...`
+  const [cardsdata , setCradsData] = useState(data);  
   function deleter (id) {
     const newcard = cardsdata.filter((card) => {
       return card.id !== id 

@@ -5,18 +5,68 @@
   background-color: black;
   color: white;
 }
-
 .App h1{
-  background-color:rgb(38, 218, 101);
+  background-color:black;
   text-align: center;
   width: 350px;
   margin-left: 36%;
   margin-top: 10px;
-  border: 2px solid #fff;
+  border: 2px solid rgb(28, 220, 92);
   padding-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgb(28, 220, 92);
+}
+.Cards{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 86px; 
 }
 .card{
   width: 30%;
-  border: 2px solid #fff;
-  margin: 20px;
+  margin: 10px;
+  border-radius: 25px;
+  padding: 10px;
+  /* height: 80vh; */
+  box-shadow: 1px 1px 7px rgb(28, 220, 92);
+  min-height: 70vh;
+}
+.card img{
+  width: 80%;
+  margin-left: 30px;
+  height: 30vh;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.price , .place{
+  margin-left: 10px;
+  padding: 2px;
+}
+.card p {
+  margin: 8px;
+  /* overflow: visible; */
+}
+.card span{
+  cursor: pointer;
+  color: blue;
+}
+.card .btn1 {
+  width: 90px;
+  padding: 6px;
+  margin: 5px;
+  margin-left: 15%;
+  border: 2.5px solid  rgb(28, 220, 92);
+  font-size: 16px;
+}
+.card .btn2{
+  width: 120px;
+  padding: 6px;
+  margin: 5px;
+  border: 2.5px solid  rgb(28, 220, 92);
+  font-size: 16px;
+}
+.btn1:hover , .btn2:hover{
+  background-color:rgb(28, 220, 92);
+  color: #fff; 
+  border: 2.5px solid #fff;
 }
